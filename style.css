@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(#FFB200, #7A1CAC, #EBD3F8, #EBD3F8);
+    animation: animate 20s ease-in-out infinite;
+    background-size: 400% 400%;
+    width: 100vh;
+    height: 100vh;
+}
+@keyframes animate{
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    0%{
+        background-position: 0 50%;
+    }
+}
+.main{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+    position: relative;
+    left: 50px;
+}
+.main-left-title h2{
+    font-weight: 600;
+    color: #000000;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+.main-left-title hr{
+    border: none;
+    width: 120px;
+    height: 5px;
+    background-color: #000000;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.Contact-input{
+    width: 400px;
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 25px;
+    font-weight: 500;
+    color: #666;
+    border-radius: 50px;
+}
+.main-left textarea{
+    height: 140px;
+    padding-top: 15px;
+    border-radius: 20px;
+}
+.Contact-input:focus{
+    border: 2px solid #ff994f;
+}
+.Contact-input::placeholder{
+    color: #a9a9a9;
+}
+.main-right img{
+    border-radius: 50%;
+    width: 300px;
+    height: 400px;
+    margin-left: 75%;
+    border:5px solid #a31fcf;
+}
+.main-left button {
+    padding: 0.8em 1.8em;
+    border: 2px solid #fff;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: .3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #fff;
+}
+.main-left button::before {
+    content: '';
+    width: 0;
+    height: 300%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background: #fff;
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+.main-left button:hover::before {
+    width: 105%;
+}
+.main-left button:hover {
+    color: #111;
+}
+
+@media (max-width: 800px) {
+    .Contact-input{
+        width: 80vw;
+    }
+    .main-right{
+        display: none;
+    }
+    
+}
